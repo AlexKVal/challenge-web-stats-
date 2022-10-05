@@ -1,0 +1,131 @@
+:root {
+  --clr-primary: #7000FF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, p {
+  margin: 0;
+}
+
+/* mobile */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #181818;
+  color: white;
+  padding: 0 2em;
+}
+
+main {
+  margin: 4rem auto;
+  max-width: 21.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.count {
+  font-weight: bold;
+}
+
+.label {
+  font-size: 1.125rem;
+  text-transform: uppercase;
+}
+
+.first-section,
+.middle-section {
+  padding: 3rem 2.75rem;
+}
+
+.first-section,
+.middle-section,
+.cta {
+  border-radius: .625em;
+}
+
+.first-section {
+  background-color: var(--clr-primary);
+  font-weight: bold;
+}
+.first-section .count {
+  font-size: 3.125rem;
+}
+
+.middle-section {
+  border: #2E2E2E 3px solid;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.middle-section .count {
+  font-size: 2rem;
+}
+
+.card svg {
+  float: left;
+  margin-right: 0.6875rem;
+}
+
+.cta {
+  display: block;
+  padding: 0.875rem;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white;
+  background-color: var(--clr-primary);
+}
+
+.note {
+  margin: 1.375rem auto;
+  width: 16.75rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #878787;
+}
+.note span {
+  font-weight: bold;
+}
+
+/* tablet */
+@media screen and (min-width: 903px) {
+  main {
+    max-width: 1200px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .first-section {
+    flex: 1;
+  }
+
+  .middle-section {
+    flex-direction: row;
+    flex: 2;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+  }
+  .card {
+    flex: 1;
+  }
+
+  .cta-section {
+    flex-basis: 100%;
+  }
+}
+
+/* desktop */
+@media screen and (min-width: 1200px) {
+  .cta-section {
+    flex-basis: 0;
+  }
+  .note {
+    text-align: left;
+  }
+}
